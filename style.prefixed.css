@@ -13,9 +13,6 @@ body {
   width: 800px;
   font-size: 1.6rem;
   padding-top: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 h1 {
@@ -34,4 +31,4 @@ p {
 .footer {
   margin-top: 200px;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.prefixed.css.map */
