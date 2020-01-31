@@ -1,0 +1,45 @@
+--Instalacja--
+
+1) Zainstaluj NPM [który jest cześcią "Node.js"]
+2) Zaktualizuj npm komendą:
+	$ npm@latest -g
+
+--Inicjacja--
+
+1) Otwórz terminal w folderze i wykonaj jednorazową inicjację:
+	$ npm init -y 
+// Ta komenda utworzy plik konfiguracyjny package.json (Konfiguruje zachowanie NPM w projekcie)
+// Teraz, gdy mamy już pobrany Node.js zaktualizowany do najnowszej wersji, możemy przejśc do instalacji przydatnych pakietów.
+
+----) BrowserSync [Podgląd strony na żywo]
+
+// W otwartym terminalu wywołaj komendę 
+	$ npm install --save-dev browser-syns
+
+//Komenda służąca do wywołania BrowserSync wygląda następująco:
+	$ node_modules/.bin/browser-sync start --server --files "css/*.css" "*.html"
+//Od tego momentu możemy połączyć się z life serverem wchodząc pod adres "localhost".
+//Można również połączyć się z innych urządzenim z tej samej sieci za pomocą adresu "External" 
+//Działa tak długo, aż zatrzymamy go kombinacją Ctrl+C
+
+--) Autoprefixer-cli [konwertuje style CSS tak, by inne przeglądarki umiały je przeczytać.
+
+1) Instalacja:
+	$ npm install --global autoprefixer-cli
+2) Korzystanie:
+	$ autoprefixer-cli -o style.prefixed.css style.css
+// Style.prefixed.css oraz style.css należy odpowiednio zamienić tak, by nazwa zgadzała się z plikiem css zapisanym w folderze.
+// Przykład:  display: flex; wyświetli także:
+  	      display: -webkit-box;
+              display: -ms-flexbox;
+3) Dokumentacja:
+	$ autoprefixer-cli -h
+
+--) Html-validate [sprawdza kod plik(u/ów) pod kątem błędów, nie wybacza nawet najdrobniejszych błędów.
+
+1) Instalacja: 
+	npm install --save-dev html-validate
+2) Korzystanie: 
+	$ html-validate index.html [Sprawdza pojedyńczy plik .html]
+	$ html-validate .[kropka na końcu = sprawdzenie wszystkich plików w folderze]
+//brak zwrotu = brak błędów]
